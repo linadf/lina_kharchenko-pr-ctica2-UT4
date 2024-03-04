@@ -1,0 +1,22 @@
+<!DOCTYPE rss [
+  <!ELEMENT rss (channel)>
+  <!ATTLIST rss version (0.91|1.0|2.0) #REQUIRED>
+
+  <!ELEMENT channel (title, link, description, item+)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT link (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+
+  <!ELEMENT item (title, link, description, author, actions?)>
+  <!ELEMENT author (#PCDATA)>
+  <!ELEMENT actions (publicationTime, highlight?, like?, share?, shareWithNote?, email?, saveUnread?, addTags?)>
+  <!ELEMENT publicationTime (#PCDATA)>
+  <!ELEMENT highlight (#PCDATA)>
+  <!ELEMENT like (#PCDATA)>
+  <!ELEMENT share (#PCDATA)>
+  <!ELEMENT shareWithNote (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT saveUnread (#PCDATA)>
+  <!ELEMENT addTags (#PCDATA)>
+]>
+
