@@ -1,1 +1,34 @@
+<!DOCTYPE Band [
+<!ELEMENT Band (NameBand, (History | Awards)?, Member+, Instrument*)>
+<!ELEMENT NameBand (#PCDATA)>
+<!ELEMENT History (#PCDATA)>
+<!ELEMENT Awards (#PCDATA)>
+<!ELEMENT Member (NameMember, Role, Joined)>
+<!ATTLIST Member BDate NMTOKEN #IMPLIED>
+<!ATTLIST Member Plays IDREF #REQUIRED>
+<!ELEMENT NameMember (#PCDATA)>
+<!ELEMENT Role (#PCDATA)>
+<!ELEMENT Joined (EMPTY)>
+<!ATTLIST Joined YEAR CDATA #REQUIRED>
+<!ELEMENT Instrument (#PCDATA)>
+<!ATTLIST Instrument Id ID #REQUIRED>
+]>
+
+<Band>
+  <NameBand>The Awesome Band</NameBand>
+  <History>Formed in 2005</History>
+  <Awards>Best New Artist 2006</Awards>
+  <Member BDate="1980-01-01" Plays="guitar">
+    <NameMember>John Doe</NameMember>
+    <Role>Guitarist</Role>
+    <Joined YEAR="2005" />
+  </Member>
+  <Member BDate="1985-05-10" Plays="drums">
+    <NameMember>Jane Smith</NameMember>
+    <Role>Drummer</Role>
+    <Joined YEAR="2008" />
+  </Member>
+  <Instrument Id="guitar">Electric Guitar</Instrument>
+  <Instrument Id="drums">Drum Set</Instrument>
+</Band>
 
